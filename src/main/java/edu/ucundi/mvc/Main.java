@@ -5,10 +5,23 @@
  */
 package edu.ucundi.mvc;
 
+import edu.ucundi.controlador.Controlador;
+import edu.ucundi.modelo.Modelo;
+import edu.ucundi.vista.Vista;
+
 /**
  *
  * @author Eduard Fierro
  */
 public class Main {
-    
+     public static void main(String[] args) {
+        Vista vista = new Vista();
+        Modelo mod = new Modelo();
+       
+        Controlador control = new Controlador(vista, mod);
+        control.iniciar();
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+        
+    }
 }

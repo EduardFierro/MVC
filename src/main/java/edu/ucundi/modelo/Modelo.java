@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package edu.ucundi.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,16 +14,7 @@ import java.util.List;
  */
 public class Modelo {
     private String nombre;
-    private List<String> listaFiguras = new ArrayList<>();
-    private String resultado;
-
-    public String getResultado() {
-        return resultado;
-    }
-
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
-    }
+    
     
     public String getNombre() {
         return nombre;
@@ -33,8 +24,5 @@ public class Modelo {
         this.nombre = nombre;
     }
    
-    public String agregar(){
-        this.resultado = this.nombre;
-        return this.resultado;
-    }
+    
 }
