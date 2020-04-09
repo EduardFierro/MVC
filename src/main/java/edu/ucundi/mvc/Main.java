@@ -12,9 +12,15 @@ import edu.ucundi.vista.Vista;
 /**
  *
  * @author Eduard Fierro
+ * @author Arley Rivera
  */
 public class Main {
+    /**
+     * 
+     * @param args 
+     */
      public static void main(String[] args) {
+        
         Vista vista = new Vista();
         Modelo mod = new Modelo();
        

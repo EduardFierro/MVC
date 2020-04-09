@@ -11,15 +11,22 @@ import java.util.List;
 /**
  *
  * @author Eduard Fierro
+ * @author  Arley rivera
  */
-public class Modelo {
+public class Modelo {  
     private String nombre;
     
-    
+    /**
+     * 
+     * @return 
+     */
     public String getNombre() {
         return nombre;
     }
-
+    /**
+     * 
+     * @param nombre 
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

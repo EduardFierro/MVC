@@ -8,6 +8,7 @@ package edu.ucundi.vista;
 /**
  *
  * @author Eduard Fierro
+ * @author Arley rivera
  */
 public class Vista extends javax.swing.JFrame {
 
@@ -36,8 +37,19 @@ public class Vista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        TF_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TF_nombreActionPerformed(evt);
+            }
+        });
+
         B_Guardar.setBackground(new java.awt.Color(51, 255, 51));
         B_Guardar.setText("Guardar");
+        B_Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_GuardarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Escriba su nombre:");
 
@@ -85,9 +97,18 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void B_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_GuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_B_GuardarActionPerformed
+
+    private void TF_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TF_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TF_nombreActionPerformed
+
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -119,7 +140,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton B_Guardar;
     public javax.swing.JTextField TF_nombre;

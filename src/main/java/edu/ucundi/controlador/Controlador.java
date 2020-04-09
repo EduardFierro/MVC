@@ -15,24 +15,32 @@ import java.util.ArrayList;
 /**
  *
  * @author Eduard Fierro
+ * @author Arley rivera
  */
 public class Controlador implements ActionListener {
-
+    
     private ArrayList nombres = new ArrayList();
     private Vista vista;
     private Modelo modelo;
-
+    /**
+     * 
+     * @param vista
+     * @param modelo 
+     */
     public Controlador(Vista vista, Modelo modelo) {
         this.modelo = modelo;
         this.vista = vista;
         this.vista.B_Guardar.addActionListener(this);
     }
-
+    
     public void iniciar() {
         vista.setTitle("Agregar nombres");
         vista.setLocationRelativeTo(null);
     }
-
+    /**
+     * 
+     * @param e 
+     */
     public void actionPerformed(ActionEvent e) {
 
         modelo.setNombre(vista.TF_nombre.getText());
