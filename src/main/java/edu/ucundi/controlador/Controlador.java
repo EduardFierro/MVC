@@ -18,42 +18,43 @@ import java.util.ArrayList;
  * @author Arley rivera
  */
 public class Controlador implements ActionListener {
-    
+
     private ArrayList nombres = new ArrayList();
     private Vista vista;
     private Modelo modelo;
+
     /**
-     * 
+     *
      * @param vista
-     * @param modelo 
+     * @param modelo
      */
     public Controlador(Vista vista, Modelo modelo) {
         this.modelo = modelo;
         this.vista = vista;
         this.vista.B_Guardar.addActionListener(this);
     }
-    
+
     public void iniciar() {
         vista.setTitle("Agregar nombres");
         vista.setLocationRelativeTo(null);
     }
+
     /**
-     * 
-     * @param e 
+     *metodo de las acciones del boton guardar 
+     * @param e
      */
     public void actionPerformed(ActionEvent e) {
 
         modelo.setNombre(vista.TF_nombre.getText());
         nombres.add(modelo.getNombre());
         DefaultListModel mo = new DefaultListModel();
-        //mo.addElement(modelo.getNombre());
+
         for (Object n : nombres) {
             mo.addElement(n);
         }
 
         vista.jList1.setModel(mo);
 
-        // vista.jTextField1.setText(modelo.getNombre());
         vista.TF_nombre.setText("");
 
     }

@@ -17,14 +17,14 @@ public class Modelo {
     private String nombre;
     
     /**
-     * 
+     * meteodo get de la variable nombre
      * @return 
      */
     public String getNombre() {
         return nombre;
     }
     /**
-     * 
+     *  meteodo set de la variable nombre
      * @param nombre 
      */
     public void setNombre(String nombre) {
